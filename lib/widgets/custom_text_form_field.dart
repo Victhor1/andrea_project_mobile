@@ -1,3 +1,4 @@
+import 'package:andrea_project_mobile/models/regex_validator_model.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -18,6 +19,8 @@ Container customTextFormField({
   IconButton? suffixIcon,
   double horizontalMargin = 0,
   double verticalMargin = 5,
+  bool isRequired = true,
+  List<RegexValidatorModel>? validators,
 }) =>
     Container(
       margin: EdgeInsets.symmetric(
@@ -27,6 +30,20 @@ Container customTextFormField({
       child: TextFormField(
         controller: controller,
         focusNode: focusNode,
+        validator: (value) {
+          if (isRequired && value!.isEmpty) {
+            return 'required value';
+          }
+
+          if (validators == null) return null;
+
+          for (RegexValidatorModel data in validators) {
+            RegExp regex = RegExp('${data.regex}');
+            if (!regex.hasMatch('$value')) return data.message;
+          }
+
+          return null;
+        },
         obscureText: isObscure,
         keyboardType: textInputType,
         textInputAction: textInputAction,

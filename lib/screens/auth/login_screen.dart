@@ -44,7 +44,11 @@ class LoginScreen extends GetView<AuthController> {
                 const LoginFormComponent(),
                 Obx(
                   () => customButton(
-                    function: () {},
+                    function: () {
+                      if (controller.authFormKey.currentState!.validate()) {
+                        int ss = 1;
+                      }
+                    },
                     content: Text(
                       !controller.isRegister.value ? 'INGRESAR' : 'REGISTRAR',
                       style: TextStyle(
