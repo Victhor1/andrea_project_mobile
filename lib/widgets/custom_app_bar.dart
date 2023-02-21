@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 AppBar customAppBar({
+  Function? backAction,
   String title = '',
 }) =>
     AppBar(
@@ -14,7 +15,10 @@ AppBar customAppBar({
       ),
       elevation: 0,
       leading: GestureDetector(
-        onTap: () => Get.back(),
+        onTap: () {
+          if (backAction != null) backAction();
+          Get.back();
+        },
         child: const Icon(
           Icons.arrow_back_ios_new_rounded,
           size: 18,

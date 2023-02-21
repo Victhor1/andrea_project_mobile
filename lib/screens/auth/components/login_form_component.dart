@@ -38,7 +38,7 @@ class LoginFormComponent extends GetView<AuthController> {
             focusNode: controller.emailFocusNode,
             controller: controller.ctrlEmail,
             hintText: 'Email',
-            textInputType: TextInputType.text,
+            textInputType: TextInputType.emailAddress,
             textInputAction: TextInputAction.next,
             onEditingCompletefocusNode: controller.passwordFocusNode,
             validators: [
@@ -102,7 +102,10 @@ class LoginFormComponent extends GetView<AuthController> {
                   child: Container(
                     margin: const EdgeInsets.symmetric(vertical: 5),
                     child: GestureDetector(
-                      onTap: () => Get.toNamed('/forgot-password'),
+                      onTap: () {
+                        controller.resetForgotPasswordValues();
+                        Get.toNamed('/forgot-password');
+                      },
                       child: Text(
                         'Olvidaste tu contraseña?',
                         style: TextStyle(color: Colors.grey[100]),
