@@ -1,5 +1,6 @@
 import 'package:andrea_project_mobile/controllers/auth_controller.dart';
 import 'package:andrea_project_mobile/screens/auth/components/forgot_password_first_state_component.dart';
+import 'package:andrea_project_mobile/theme/app_theme.dart';
 import 'package:andrea_project_mobile/widgets/custom_app_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -13,7 +14,7 @@ class ForgotPasswordScreen extends GetView<AuthController> {
       appBar: customAppBar(
         backAction: () => controller.resetForgotPasswordValues(),
       ),
-      backgroundColor: Colors.grey[900],
+      backgroundColor: AppTheme.black,
       body: SafeArea(
         child: Center(
           child: Obx(

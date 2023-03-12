@@ -1,4 +1,5 @@
 import 'package:andrea_project_mobile/models/regex_validator_model.dart';
+import 'package:andrea_project_mobile/theme/app_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -64,12 +65,12 @@ Container customTextFormField({
             borderRadius: BorderRadius.circular(borderRadius),
           ),
           errorBorder: OutlineInputBorder(
-            borderSide: const BorderSide(
-              color: Colors.red,
+            borderSide: BorderSide(
+              color: AppTheme.hardRed,
             ),
             borderRadius: BorderRadius.circular(borderRadius),
           ),
-          focusColor: Colors.red,
+          focusColor: AppTheme.hardRed,
           filled: isFilled,
           fillColor: hintColor ?? Colors.grey[600],
           hintText: hintText,

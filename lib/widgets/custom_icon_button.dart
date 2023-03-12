@@ -1,3 +1,4 @@
+import 'package:andrea_project_mobile/theme/app_theme.dart';
 import 'package:flutter/material.dart';
 
 IconButton customIconButton({
@@ -5,7 +6,7 @@ IconButton customIconButton({
   required IconData icon,
 }) =>
     IconButton(
-      color: Colors.grey[200],
+      color: AppTheme.white,
       onPressed: () => onPressed(),
       icon: Icon(icon),
     );

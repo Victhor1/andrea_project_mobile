@@ -1,3 +1,4 @@
+import 'package:andrea_project_mobile/theme/app_theme.dart';
 import 'package:flutter/material.dart';
 
 Container customButton({
@@ -13,12 +14,12 @@ Container customButton({
       ),
       child: Material(
         borderRadius: BorderRadius.circular(10),
-        color: Colors.black,
+        color: AppTheme.black,
         child: InkWell(
           borderRadius: BorderRadius.circular(10),
           onTap: () => function(),
-          highlightColor: Colors.purple[900],
-          splashColor: Colors.purple[700],
+          highlightColor: AppTheme.primariColor,
+          splashColor: AppTheme.secondaryColor,
           child: Container(
             width: double.infinity,
             padding: const EdgeInsets.symmetric(

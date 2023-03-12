@@ -1,3 +1,4 @@
+import 'package:andrea_project_mobile/theme/app_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -6,7 +7,7 @@ AppBar customAppBar({
   String title = '',
 }) =>
     AppBar(
-      backgroundColor: Colors.transparent,
+      backgroundColor: AppTheme.transparent,
       title: Text(
         title,
         style: const TextStyle(
@@ -19,9 +20,10 @@ AppBar customAppBar({
           if (backAction != null) backAction();
           Get.back();
         },
-        child: const Icon(
+        child: Icon(
           Icons.arrow_back_ios_new_rounded,
           size: 18,
+          color: AppTheme.white,
         ),
       ),
     );

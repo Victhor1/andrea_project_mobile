@@ -1,5 +1,6 @@
 import 'package:andrea_project_mobile/controllers/auth_controller.dart';
 import 'package:andrea_project_mobile/screens/auth/components/login_form_component.dart';
+import 'package:andrea_project_mobile/theme/app_theme.dart';
 import 'package:andrea_project_mobile/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -10,7 +11,7 @@ class LoginScreen extends GetView<AuthController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[900],
+      backgroundColor: AppTheme.black,
       body: Center(
         child: SingleChildScrollView(
           child: Padding(
@@ -23,7 +24,7 @@ class LoginScreen extends GetView<AuthController> {
                   margin: const EdgeInsets.symmetric(vertical: 5),
                   child: Icon(
                     Icons.lock,
-                    color: Colors.grey[100],
+                    color: AppTheme.white,
                     size: 100,
                   ),
                 ),
@@ -35,7 +36,7 @@ class LoginScreen extends GetView<AuthController> {
                           ? '¡Hola de nuevo!'
                           : 'Registra una cuenta',
                       style: TextStyle(
-                        color: Colors.grey[100],
+                        color: AppTheme.white,
                         fontSize: 20,
                       ),
                     ),
@@ -45,14 +46,12 @@ class LoginScreen extends GetView<AuthController> {
                 Obx(
                   () => customButton(
                     function: () {
-                      if (controller.authFormKey.currentState!.validate()) {
-                        int ss = 1;
-                      }
+                      if (controller.authFormKey.currentState!.validate()) {}
                     },
                     content: Text(
                       !controller.isRegister.value ? 'INGRESAR' : 'REGISTRAR',
                       style: TextStyle(
-                        color: Colors.grey[100],
+                        color: AppTheme.white,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
@@ -70,7 +69,7 @@ class LoginScreen extends GetView<AuthController> {
                               ? 'No tienes una cuenta? '
                               : 'Ya tienes una cuenta? ',
                           style: TextStyle(
-                            color: Colors.grey[300],
+                            color: AppTheme.mediumGrey,
                           ),
                         ),
                         GestureDetector(
@@ -85,7 +84,7 @@ class LoginScreen extends GetView<AuthController> {
                                 ? 'Registrate'
                                 : 'Ingresa',
                             style: TextStyle(
-                              color: Colors.grey[100],
+                              color: AppTheme.white,
                               fontWeight: FontWeight.bold,
                             ),
                           ),

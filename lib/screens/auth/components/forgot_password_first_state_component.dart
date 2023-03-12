@@ -1,5 +1,6 @@
 import 'package:andrea_project_mobile/controllers/auth_controller.dart';
 import 'package:andrea_project_mobile/models/regex_validator_model.dart';
+import 'package:andrea_project_mobile/theme/app_theme.dart';
 import 'package:andrea_project_mobile/utils/messages_utils.dart';
 import 'package:andrea_project_mobile/utils/regex_utils.dart';
 import 'package:andrea_project_mobile/widgets/custom_button.dart';
@@ -16,10 +17,10 @@ class ForgotPasswordFirstStateComponent extends GetView<AuthController> {
       mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        const Text(
+        Text(
           'Ingresa el correo electronico con el que te registraste',
           style: TextStyle(
-            color: Colors.white,
+            color: AppTheme.white,
           ),
         ),
         Form(
@@ -42,10 +43,10 @@ class ForgotPasswordFirstStateComponent extends GetView<AuthController> {
           ),
         ),
         customButton(
-          content: const Text(
+          content: Text(
             'siguiente',
             style: TextStyle(
-              color: Colors.white,
+              color: AppTheme.white,
             ),
           ),
           function: () => controller.forgotPasswordState.value = 2,

@@ -1,5 +1,6 @@
 import 'package:andrea_project_mobile/controllers/auth_controller.dart';
 import 'package:andrea_project_mobile/models/regex_validator_model.dart';
+import 'package:andrea_project_mobile/theme/app_theme.dart';
 import 'package:andrea_project_mobile/utils/messages_utils.dart';
 import 'package:andrea_project_mobile/utils/regex_utils.dart';
 import 'package:andrea_project_mobile/widgets/custom_icon_button.dart';
@@ -108,7 +109,9 @@ class LoginFormComponent extends GetView<AuthController> {
                       },
                       child: Text(
                         'Olvidaste tu contraseña?',
-                        style: TextStyle(color: Colors.grey[100]),
+                        style: TextStyle(
+                          color: AppTheme.white,
+                        ),
                       ),
                     ),
                   ),
