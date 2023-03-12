@@ -48,7 +48,9 @@ Container customTextFormField({
         obscureText: isObscure,
         keyboardType: textInputType,
         textInputAction: textInputAction,
-        style: TextStyle(color: Colors.grey[100]),
+        style: TextStyle(
+          color: AppTheme.white,
+        ),
         onFieldSubmitted: (e) => onEditingCompletefocusNode != null
             ? FocusScope.of(Get.context!).requestFocus(
                 onEditingCompletefocusNode,
@@ -60,7 +62,7 @@ Container customTextFormField({
           ),
           focusedBorder: OutlineInputBorder(
             borderSide: BorderSide(
-              color: Colors.grey[400] as Color,
+              color: AppTheme.mediumGrey,
             ),
             borderRadius: BorderRadius.circular(borderRadius),
           ),
@@ -72,9 +74,12 @@ Container customTextFormField({
           ),
           focusColor: AppTheme.hardRed,
           filled: isFilled,
-          fillColor: hintColor ?? Colors.grey[600],
+          fillColor: hintColor ?? AppTheme.hardGrey,
           hintText: hintText,
-          hintStyle: hintStyle ?? TextStyle(color: Colors.grey[200]),
+          hintStyle: hintStyle ??
+              TextStyle(
+                color: AppTheme.white,
+              ),
           enabled: isEnabled,
           suffixIcon: suffixIcon,
         ),

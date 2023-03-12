@@ -14,7 +14,7 @@ Container customButton({
       ),
       child: Material(
         borderRadius: BorderRadius.circular(10),
-        color: AppTheme.black,
+        color: AppTheme.primariColor,
         child: InkWell(
           borderRadius: BorderRadius.circular(10),
           onTap: () => function(),
