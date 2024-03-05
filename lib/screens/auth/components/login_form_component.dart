@@ -37,7 +37,7 @@ class LoginFormComponent extends GetView<AuthController> {
             ),
           ),
           customTextFormField(
-            key: const Key('email'),
+            key: const Key('emailll'),
             focusNode: controller.emailFocusNode,
             controller: controller.ctrlEmail,
             hintText: 'Email',
