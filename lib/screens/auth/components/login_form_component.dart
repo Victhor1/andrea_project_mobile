@@ -33,8 +33,7 @@ class LoginFormComponent extends GetView<AuthController> {
                 hintText: 'Name',
                 textInputType: TextInputType.text,
                 textInputAction: TextInputAction.next,
-                onEditingCompletefocusNode: controller.emailFocusNode,
-              ),
+                onEditingCompletefocusNode: controller.emailFocusNode,)
             ),
           ),
           customTextFormField(
@@ -48,7 +47,7 @@ class LoginFormComponent extends GetView<AuthController> {
             validators: [
               RegexValidatorModel(
                 regex: RegexUtils.emailRegex,
-                message: MessagesUtils.invalidEmailMessage,
+                message: MessagesUtils.invalidEmailMessage
               ),
             ],
           ),
