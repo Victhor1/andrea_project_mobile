@@ -53,7 +53,7 @@ class LoginFormComponent extends GetView<AuthController> {
           ),
           Obx(
             () => customTextFormField(
-              key: const Key('passwordfgsd'),
+              key: const Key('passwordssssfgsd'),
               focusNode: controller.passwordFocusNode,
               controller: controller.ctrlPassword,
               hintText: 'Password',
