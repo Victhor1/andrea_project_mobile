@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      title: 'Andrea_Project',
+      title: 'Andrea_Projssssssect',
       translations: AppTranslation(),
       locale: Get.locale,
       fallbackLocale: const Locale('en', 'US'),
@@ -29,6 +29,7 @@ class MyApp extends StatelessWidget {
           Theme.of(context).textTheme,
         ),
       ),
+
     );
   }
 }
