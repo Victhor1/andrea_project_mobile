@@ -27,7 +27,7 @@ class LoginFormComponent extends GetView<AuthController> {
             () => Visibility(
               visible: controller.isRegister.value,
               child: customTextFormField(
-                key: const Key('name'),
+                key: const Key('namssssse'),
                 focusNode: controller.nameFocusNode,
                 controller: controller.ctrlName,
                 hintText: 'Name',
